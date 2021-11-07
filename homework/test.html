@@ -4,24 +4,14 @@
   var n = 0;
   n = getRandom(3);
   if(n==1)
-  {document.write('<img src="pic/20211105_140504.jpg">');
-   await delay(1);
-   document.write('<input type="button" value="press1" onmousedown="mousedown_event();">');}
+  {document.write('<img src="pic/20211105_140504.jpg">');}
   else if(n==2)
-  {document.write('<img src="pic/19_cry_book.png">');
-   await delay(1);
-   document.write('<input type="button" value="press2" onmousedown="mousedown_event();">');}
+  {document.write('<img src="pic/19_cry_book.png">');}
   else (n==3)
-  {document.write('<img src="pic/19_cry_book.png">');
-   await delay(1);
-   document.write('<input type="button" value="press3" onmousedown="mousedown_event();">');}
+  {document.write('<img src="pic/19_cry_book.png">');}
 };
 function getRandom(x){
     return Math.floor(Math.random()*x)+1;
-};
-function delay(n){
-  return new Promise(function(resolve)){
-                     setTimeout(resolve,n*1000);
 };
   </script>
 </haed>
