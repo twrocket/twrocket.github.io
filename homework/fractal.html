@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+        <body>
+                input<input type="text" id="num">
+                <button onclick="fuc();">send</button><br>
+                <canvas id="can" width="300" height="300"></canvas>
+                <input type="button" value="reload" onclick="history.go(0);">
+        </body>
+        <script>
+        let ctx = can.getContext("2d");
+        function fractalFunction(a,b,x,y,times,line_width) {
+                if(times==0){
+                ctx.moveTo(a, b);
+                ctx.lineTo(x,y);
+                ctx.lineWidth = 0.5;
+                ctx.strokeStyle = "green";
+                ctx.stroke();
+             }
+             else{
+                let a2=(x-a)/3+a;
+                let b2=(y-b)/3+b;
+                fractalFunction(a,b,a2,b2,times-1,line_width+1);
+                let a3=(x-a)/2+a+(y-b)*Math.sqrt(3)/6;
+                let b3=(y-b)/2+b-(x-a)*Math.sqrt(3)/6;
+                fractalFunction(a2,b2,a3,b3,times-1,line_width+1);
+                let a4=(a-x)/3+x;
+                let b4=(b-y)/3+y;
+                fractalFunction(a3,b3,a4,b4,times-1,line_width+1);
+                fractalFunction(a4,b4,x,y,times-1,line_width+1);
+             }
+        }
+        function fuc(){
+        	let num=parseInt(document.getElementById("num").value);
+        	fractalFunction(0,200,300,200,num,0);
+        }
+        </script>
+</html>
