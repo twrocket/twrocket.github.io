@@ -3,7 +3,7 @@
         <body>
                 input<input type="text" id="num">
                 <button onclick="fuc();">send</button><br>
-                <canvas id="can" width="300" height="300"></canvas>
+                <canvas id="can" width="600" height="600"></canvas>
                 <input type="button" value="reload" onclick="history.go(0);">
         </body>
         <script>
@@ -31,7 +31,7 @@
         }
         function fuc(){
         	let num=parseInt(document.getElementById("num").value);
-        	fractalFunction(0,200,300,200,num,0);
+        	fractalFunction(0,200,600,200,num,0);
         }
         </script>
 </html>
