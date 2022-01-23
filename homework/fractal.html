@@ -5,7 +5,7 @@
                 <button onclick="fuc();">send</button><br>
                 每次輸入完都要reload才能再輸入,不然會重疊上一次的圖形<br>
                 <input type="button" value="reload" onclick="history.go(0);"><br>
-                用遞迴做的,這個的時間複雜度是O(4^n),輸入極限大概到5 ,ಠ╭╮ಠ
+                用遞迴做的,這個的時間複雜度是O(4^n),輸入極限大概到5 ,ಠ╭╮ಠ<br>
                 <canvas id="can" width="800" height="800"></canvas><br>
         </body>
         <script>
@@ -34,8 +34,8 @@
         function fuc(){
         	let num=parseInt(document.getElementById("num").value);
         	fractalFunction(20,250,780,250,num,0);
-                fractalFunction(400,708.786,20,250,num,0);
-                fractalFunction(780,250,400,708.786,num,0);
+                fractalFunction(400,908.1793,20,250,num,0);
+                fractalFunction(780,250,400,908.1793,num,0);
         }
         </script>
 </html>
