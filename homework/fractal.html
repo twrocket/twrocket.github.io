@@ -23,6 +23,8 @@
         let ctx = can.getContext("2d");
         function fractalFunction(a,b,x,y,times,line_width) {
                 if(times==0){
+                ctx.fillStyle="white";
+                ctx.fillRect(0,0,800,1000);
                 ctx.moveTo(a, b);
                 ctx.lineTo(x,y);
                 ctx.lineWidth = 0.5;
