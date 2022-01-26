@@ -23,8 +23,6 @@
         let ctx = can.getContext("2d");
         function fractalFunction(a,b,x,y,times,line_width) {
                 if(times==0){
-                ctx.fillStyle="white";
-                ctx.fillRect(0,0,800,1000);
                 ctx.moveTo(a, b);
                 ctx.lineTo(x,y);
                 ctx.lineWidth = 0.5;
@@ -45,6 +43,8 @@
              }
         }
         function fuc(){
+                ctx.fillStyle="black";
+                ctx.fillRect(0,0,800,1000);
         	let num=parseInt(document.getElementById("num").value);
         	fractalFunction(20,250,780,250,num,0);
                 fractalFunction(400,908.1793,20,250,num,0);
